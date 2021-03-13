@@ -3,10 +3,8 @@ package com.company;
 import java.util.Scanner;
 
 public class Main {
-
-    @SuppressWarnings({"checkstyle:RegexpSingleline", "checkstyle:LineLength"})
     public static void main(final String[] args) {
-        Scanner scanner = new Scanner(System.in, "UTF-8");
+        Scanner scanner = new Scanner(System.in);
         String userCountryQuery;
         Country resultCountry = null;
 
@@ -30,6 +28,7 @@ public class Main {
             } catch (IllegalArgumentException e) {
                 System.out.println("Наименование страны на английском введено некорректно,"
                         + " проверяем русское название...");
+                resultCountry = null;
             }
             if (resultCountry == null) {
                 try {

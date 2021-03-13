@@ -31,7 +31,7 @@ public enum Country {
     }
 
     String info() {
-        return "Страна " + this.name() + "(" + ruName + ")" + (isOpen ? " открыта" : " закрыта") + " для посещений";
+        return "Страна " + toString() + (isOpen ? " открыта" : " закрыта") + " для посещений";
     }
 
     @Override
